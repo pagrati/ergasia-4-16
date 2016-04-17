@@ -1,0 +1,35 @@
+@prefix ap: <http://dilab77.ionio.gr/swp/pagrati/vocab#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+ap:Dialexi: rdf:type rdfs:Class .
+ap:Class: rdf:type rdfs:Class .
+ap:Lesson: rdf:type rdfs:Class .
+ap:Teacher: rdf:type rdfs:Class;
+                rdfs:subClassof foaf:Person .
+ap:ΚΑΘΗΓΗΤΗΣ: rdf:type rdf:Property;
+           rdfs:domain ap:Dialexi;
+           rdfs:range ap:Teacher .
+ap:ΑΙΘΟΥΣΑ: rdf:type rdf:Property;
+          rdfs:domain ap:Dialexi;
+           rdfs:range ap:Class .
+ap:ΜΑΘΗΜΑ: rdf:type rdf:Property;
+          rdfs:domain ap:Dialexi;
+           rdfs:range ap:Lesson .
+ap:ΩΡΑ%20ΕΝΑΡΞΗΣ: rdf:type rdf:Property;
+                    rdf:domain ap:Dialexi;
+                     rdf:range xsd:time .
+ap:ΩΡΑ%20ΛΗΞΗΣ: rdf:type rdf:Property;
+                    rdf:domain ap:Dialexi;
+                    rdf:range xsd:time .
+ap:ΗΜΕΡΑ: rdf:type rdf:Property;
+                    rdf:domain ap:Dialexi;
+                    rdf:range xsd:string .
+ap:ΕΞΑΜΗΝΟ rdf:type rdf:Property;
+                    rdf:domain ap:Dialexi;
+                     rdf:range xsd:string .
+
+
+
+                
